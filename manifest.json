@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "short_name": "مدارس الأحد",
+  "name": "تطبيق مدارس الأحد - فارس الإنجيل",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#121212",
+  "display": "standalone",
+  "theme_color": "#121212",
+  "description": "منصة مدارس الأحد التفاعلية لمتابعة فرسان الإنجيل والخدمات الروحية أونلاين وأوفلاين."
+}

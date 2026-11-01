@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="color-scheme" content="dark" />
+    <style>
+      html,body{background:#121212;color:#f5e6c8;margin:0}
+      #splash{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem;text-align:center;font-family:Cairo,"Segoe UI",Tahoma,"Noto Naskh Arabic",sans-serif}
+      #splash i{display:block;width:5rem;height:5rem;border-radius:9999px;margin-bottom:1rem;background:linear-gradient(135deg,#d4af37,#e8d09a 50%,#d4af37)}
+      #splash h1{margin:0;font-size:1.875rem;line-height:2.25rem;font-weight:700;color:#e8d09a}
+      #splash p{margin:.25rem 0 0;font-size:.875rem;line-height:1.25rem;letter-spacing:.1em;color:#9ca3af}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- رابط عادي بدل onload عشان سياسة الأمان (CSP) تمنع أكواد JavaScript المكتوبة جوه الصفحة -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400..700&family=Cormorant+Garamond:wght@600;700&display=swap" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="تطبيق مدارس الأحد التفاعلي لمتابعة مسابقة فارس الإنجيل، رصد درجات المزامير، الأجبية، حضور القداسات والاعترافات أونلاين وأوفلاين." />
+    <title>الألف</title>
+    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/pwa-512x512.png" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="splash" role="status" aria-label="جاري التحميل">
+        <i></i>
+        <h1>الميل الثاني</h1>
+        <p>كنيسة ماريوحنا الحبيب بحلمية الزيتون</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ألوان التطبيق (تتغير من الملف الشخصي) */
+:root {
+  --gold-50: 251 245 229;
+  --gold-100: 245 230 200;
+  --gold-200: 232 208 154;
+  --gold-300: 212 175 55;
+  --gold-400: 201 162 39;
+  --gold-500: 184 148 31;
+  --gold-600: 154 122 26;
+  --gold-700: 122 96 20;
+  --gold-800: 92 72 16;
+  --gold-900: 61 48 10;
+  --dark-50: 74 74 74;
+  --dark-100: 58 58 58;
+  --dark-200: 42 42 42;
+  --dark-300: 34 34 34;
+  --dark-400: 26 26 26;
+  --dark-500: 18 18 18;
+  --dark-600: 15 15 15;
+  --dark-700: 10 10 10;
+  --dark-800: 8 8 8;
+  --dark-900: 5 5 5;
+}
+
+[data-theme='blue'] {
+  --gold-50: 237 244 254;
+  --gold-100: 216 230 253;
+  --gold-200: 176 204 251;
+  --gold-300: 79 142 247;
+  --gold-400: 73 131 227;
+  --gold-500: 62 111 193;
+  --gold-600: 49 88 153;
+  --gold-700: 38 68 119;
+  --gold-800: 28 50 86;
+  --gold-900: 17 31 54;
+  --dark-50: 67 74 100;
+  --dark-100: 52 58 78;
+  --dark-200: 38 42 57;
+  --dark-300: 31 34 46;
+  --dark-400: 23 26 35;
+  --dark-500: 16 18 24;
+  --dark-600: 14 15 20;
+  --dark-700: 9 10 14;
+  --dark-800: 7 8 11;
+  --dark-900: 4 5 7;
+}
+
+[data-theme='green'] {
+  --gold-50: 236 248 242;
+  --gold-100: 212 241 226;
+  --gold-200: 168 226 195;
+  --gold-300: 61 190 122;
+  --gold-400: 56 175 112;
+  --gold-500: 48 148 95;
+  --gold-600: 38 118 76;
+  --gold-700: 29 91 59;
+  --gold-800: 21 66 43;
+  --gold-900: 13 42 27;
+  --dark-50: 67 81 70;
+  --dark-100: 52 64 55;
+  --dark-200: 38 46 40;
+  --dark-300: 31 37 32;
+  --dark-400: 23 29 25;
+  --dark-500: 16 20 17;
+  --dark-600: 14 16 14;
+  --dark-700: 9 11 10;
+  --dark-800: 7 9 8;
+  --dark-900: 4 6 5;
+}
+
+[data-theme='purple'] {
+  --gold-50: 246 243 254;
+  --gold-100: 236 229 254;
+  --gold-200: 215 203 253;
+  --gold-300: 167 139 250;
+  --gold-400: 154 128 230;
+  --gold-500: 130 108 195;
+  --gold-600: 104 86 155;
+  --gold-700: 80 67 120;
+  --gold-800: 58 49 88;
+  --gold-900: 37 31 55;
+  --dark-50: 81 67 96;
+  --dark-100: 64 52 75;
+  --dark-200: 46 38 55;
+  --dark-300: 37 31 44;
+  --dark-400: 29 23 34;
+  --dark-500: 20 16 23;
+  --dark-600: 16 14 20;
+  --dark-700: 11 9 13;
+  --dark-800: 9 7 10;
+  --dark-900: 6 4 6;
+}
+
+[data-theme='red'] {
+  --gold-50: 252 238 240;
+  --gold-100: 249 218 222;
+  --gold-200: 243 179 188;
+  --gold-300: 229 86 107;
+  --gold-400: 211 79 98;
+  --gold-500: 179 67 83;
+  --gold-600: 142 53 66;
+  --gold-700: 110 41 51;
+  --gold-800: 80 30 37;
+  --gold-900: 50 19 24;
+  --dark-50: 89 67 70;
+  --dark-100: 70 52 55;
+  --dark-200: 50 38 40;
+  --dark-300: 41 31 32;
+  --dark-400: 31 23 25;
+  --dark-500: 22 16 17;
+  --dark-600: 18 14 14;
+  --dark-700: 12 9 10;
+  --dark-800: 10 7 8;
+  --dark-900: 6 4 5;
+}
+
+[data-theme='teal'] {
+  --gold-50: 234 249 249;
+  --gold-100: 209 242 241;
+  --gold-200: 160 229 227;
+  --gold-300: 44 197 192;
+  --gold-400: 40 181 177;
+  --gold-500: 34 154 150;
+  --gold-600: 27 122 119;
+  --gold-700: 21 95 92;
+  --gold-800: 15 69 67;
+  --gold-900: 10 43 42;
+  --dark-50: 63 81 85;
+  --dark-100: 49 64 67;
+  --dark-200: 36 46 48;
+  --dark-300: 29 37 39;
+  --dark-400: 22 29 30;
+  --dark-500: 15 20 21;
+  --dark-600: 13 16 17;
+  --dark-700: 8 11 12;
+  --dark-800: 7 9 9;
+  --dark-900: 4 6 6;
+}
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--gold-300)) rgb(var(--dark-400));
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: rgb(var(--dark-400));
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgb(var(--gold-300));
+    border-radius: 4px;
+  }
+  body {
+    background-color: rgb(var(--dark-500));
+    color: rgb(var(--gold-100));
+    font-family: 'Cairo', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .gold-text {
+    color: rgb(var(--gold-300));
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, rgb(var(--gold-300)) 0%, rgb(var(--gold-200)) 50%, rgb(var(--gold-300)) 100%);
+  }
+  .gold-border {
+    border-color: rgb(var(--gold-300));
+  }
+  .card-dark {
+    background: rgb(var(--dark-400));
+    border: 1px solid rgb(var(--gold-300) / 0.2);
+    border-radius: 1rem;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, rgb(var(--gold-300)) 0%, rgb(var(--gold-400)) 100%);
+    color: rgb(var(--dark-500));
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, rgb(var(--gold-200)) 0%, rgb(var(--gold-300)) 100%);
+    box-shadow: 0 0 20px rgb(var(--gold-300) / 0.4);
+  }
+  .btn-gold:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .btn-outline-gold {
+    border: 1px solid rgb(var(--gold-300));
+    color: rgb(var(--gold-300));
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-gold:hover {
+    background: rgb(var(--gold-300) / 0.1);
+    box-shadow: 0 0 15px rgb(var(--gold-300) / 0.2);
+  }
+  .input-dark {
+    background: rgb(var(--dark-300));
+    border: 1px solid rgb(var(--gold-300) / 0.3);
+    color: rgb(var(--gold-100));
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  .input-dark:focus {
+    outline: none;
+    border-color: rgb(var(--gold-300));
+    box-shadow: 0 0 10px rgb(var(--gold-300) / 0.2);
+  }
+  .input-dark::placeholder {
+    color: #666;
+  }
+  .shimmer-gold {
+    background: linear-gradient(90deg, rgb(var(--gold-300)) 0%, rgb(var(--gold-50)) 50%, rgb(var(--gold-300)) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+}
+
+/* ===== لوحة المتصدرين: ألوان قوس قزح بتتغيّر بالتدريج ===== */
+@property --rb { syntax: '<number>'; initial-value: 0; inherits: true; }
+@keyframes rb-spin { from { --rb: 0; } to { --rb: 360; } }
+.rb-root { animation: rb-spin 14s linear infinite; }
+.rb-stage {
+  background:
+    radial-gradient(circle at 20% 0%, hsl(calc(var(--rb) + 200) 80% 40% / 0.28), transparent 55%),
+    radial-gradient(circle at 85% 100%, hsl(calc(var(--rb) + 300) 80% 45% / 0.25), transparent 55%),
+    linear-gradient(160deg, hsl(calc(var(--rb) + 230) 55% 9%), hsl(calc(var(--rb) + 290) 50% 12%));
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+.rb-border {
+  border: 1.5px solid hsl(var(--rb) 95% 62%);
+  box-shadow: 0 0 14px hsl(var(--rb) 95% 62% / 0.5), inset 0 0 12px hsl(calc(var(--rb) + 120) 95% 62% / 0.2);
+}
+.rb-text { color: hsl(calc(var(--rb) + 140) 95% 68%); text-shadow: 0 0 10px hsl(calc(var(--rb) + 140) 95% 60% / 0.6); }
+.rb-block {
+  background: linear-gradient(180deg, hsl(calc(var(--rb) + 200) 60% 22%), hsl(calc(var(--rb) + 260) 60% 10%));
+  border-top: 2px solid hsl(var(--rb) 95% 62%);
+  box-shadow: 0 -4px 18px hsl(var(--rb) 95% 62% / 0.5);
+}
+@media (prefers-reduced-motion: reduce) { .rb-root { animation: none; } }
+
+/* الحركات المستمرة بتبدأ بعد ما الصفحة تخلص تحميل (بتحسّن سرعة العرض الأول) */
+html:not(.anim) .animate-glow,
+html:not(.anim) .shimmer-gold { animation: none !important; }
